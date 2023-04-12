@@ -1,0 +1,27 @@
+//console.log("hello world..!");
+
+const express = require('express')   //importing everthing that come with express framework
+const app = express()
+const port = 3000 // constant variable that was initiallized
+
+app.get('/', (request, response) => {      // ('/' )nthis routing, shows us somthing from importing express
+    response.send('Hello World!')
+})  // this app function gets a request and gives back a response which will be "hello world"
+
+app.post('/', (req, res) => {
+    res.send('Got a POST request')
+  })// this function resquest to post  and get a response send back
+
+  app.put('/user', (req, res) => {
+   res.send('Got a PUT request at /user')
+  })
+
+  app.delete('/user', (req, res) => {
+    es.send('Got a DELETE request at /user')
+  })
+
+app.listen(port, () => {
+  console.log(`Example app listening on port 
+  ${port}`)
+}) // function will listen to a response from a port (this a network, you can use any network port but not 80. 
+   //A network port is a channel where data can come in and out)
